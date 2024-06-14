@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- 
+<!--
 	All the vehicle settings can be setup here.
 	For documentation look up the CpSettingUtil.lua.
 -->
@@ -23,7 +23,7 @@
 			</Texts>
 		</Setting>
 		<!--Open hud with mouse-->
-		<Setting classType="AIParameterBooleanSetting" name="openHudWithMouse" defaultBool="true" onChangeCallback="cpUpdateMouseAction"/>
+		<Setting classType="AIParameterBooleanSetting" name="openHudWithMouse" defaultBool="false" onChangeCallback="cpUpdateMouseAction"/>
 
 		<!--Open hud with mouse-->
 		<Setting classType="AIParameterBooleanSetting" name="fuelSave" defaultBool="true" isExpertModeOnly="true"/>
@@ -63,7 +63,7 @@
 				 isDisabled = "isToolOffsetDisabled" vehicleConfiguration="toolOffsetX"/>
 		<!--Bale finder Offset X-->
 		<Setting classType="AIParameterSettingList" name="baleCollectorOffset" min="-10" max="10" incremental="0.1" default="0" unit="2"
-				 onChangeCallback="cpShowBaleCollectorOffset" isVisible = "isBaleCollectorOffsetVisible" 
+				 onChangeCallback="cpShowBaleCollectorOffset" isVisible = "isBaleCollectorOffsetVisible"
 				 setDefault="setAutomaticBaleCollectorOffset" vehicleConfiguration="baleCollectorOffset"/>
 		<!--Combine Offset X-->
 		<Setting classType="AIParameterSettingList" name="combineOffsetX" min="-10" max="10" incremental="0.1" default="0" unit="2"
@@ -80,9 +80,9 @@
 	<SettingSubTitle title="bunkerSilo" isVisible="areBunkerSiloSettingsVisible">
 		<Setting classType="AIParameterSettingList" name="bunkerSiloWorkWidth" min="3" max="50" incremental="0.1" unit="2" setDefault="setAutomaticBunkerSiloWorkWidth" onChangeCallback="cpShowWorkWidth"/>
 		<Setting classType="AIParameterSettingList" name="loadingShovelHeightOffset" min="-1" max="1" incremental="0.05" default="0" unit="2" precision="3"
-				isVisible="isLoadingShovelOffsetSettingVisible" isDisabled="isLoadingShovelOffsetSettingDisabled" 
+				isVisible="isLoadingShovelOffsetSettingVisible" isDisabled="isLoadingShovelOffsetSettingDisabled"
 				onChangeCallback="onCpLoadingShovelOffsetSettingChanged" vehicleConfiguration="loadingShovelOffset"/>
-		<Setting classType="AIParameterSettingList" name="levelerHeightOffset" min="0" max="0.5" incremental="0.05" default="0" unit="2" precision="3" 
+		<Setting classType="AIParameterSettingList" name="levelerHeightOffset" min="0" max="0.5" incremental="0.05" default="0" unit="2" precision="3"
 				isVisible="isLevelerHeightOffsetSettingVisible" isDisabled="isLevelerHeightOffsetSettingDisabled" />
 	</SettingSubTitle>
 
@@ -113,14 +113,14 @@
 	</SettingSubTitle>
 
 	<SettingSubTitle title="seeder" isVisible="areSowingMachineSettingsVisible">
-		<!--Ridgemarker-->	
+		<!--Ridgemarker-->
 		<Setting classType="AIParameterBooleanSetting" name="ridgeMarkersAutomatic" defaultBool="false" isVisible="isRidgeMarkerSettingVisible" isExpertModeOnly="true"/>
 		<!--Fertilizer-->
 		<Setting classType="AIParameterBooleanSetting" name="sowingMachineFertilizerEnabled" defaultBool="true" isVisible="isSowingMachineFertilizerSettingVisible"/>
 		<!--Optional sowing machine-->
 		<Setting classType="AIParameterBooleanSetting" name="optionalSowingMachineEnabled" defaultBool="false" isVisible="isOptionalSowingMachineSettingVisible" isDisabled="isOptionalSowingMachineSettingDisabled"/>
 	</SettingSubTitle>
-	
+
 	<SettingSubTitle title="multitool" isVisible="hasMultiToolCourse">
 		<!--Symmetric Lane Change-->
 		<Setting classType="AIParameterBooleanSetting" name="symmetricLaneChange"/>
